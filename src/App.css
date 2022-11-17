@@ -1,38 +1,204 @@
-.App {
+body {
+  background: linear-gradient(45deg, #00853e, #50c878);
+}
+
+.muzikApp {
+  width: 460px;
+  border: 1px solid;
+  margin: 60px auto;
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first {
+  color: red;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.song {
+  color: rgb(34, 132, 34);
+}
+
+img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  animation: 2s;
+}
+
+.buttons {
+  width: 80%;
+  height: fit-content;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.stream {
+  border: 1px solid;
+  width: 80%;
+  height: 1px;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 6px;
+  position: relative;
+}
+
+.range {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: red;
+}
+
+.range:hover {
+  cursor: pointer;
+}
+
+.songs {
+  margin: 20px auto;
+  border: 1px solid;
+  width: 80%;
+  padding: 10px;
+  overflow: scroll;
+  max-height: 150px;
+}
+
+.songImg {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.songItem {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(135, 185, 228, 0.719);
+  padding: 6px 7px;
+  border-radius: 5px;
+  margin-bottom: 11px;
+  max-height: 72px;
+  font-size: smaller;
+}
+
+.imgAndInfo {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.twirl {
+  animation: app-logo-spin infinite 11s linear;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.threedot {
+  color: green;
+  display: flex;
+  align-items: center;
+}
+
+.threedot:hover {
+  font-size: larger;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnItem {
+  color: rgb(5, 5, 170);
+  font-size: 30px;
+}
+
+.btnItem:hover {
+  font-size: 31px;
+  cursor: pointer;
+}
+
+.player__volume input {
+  position: relative;
+  top: 1px;
+}
+
+.songItem:hover {
+  cursor: pointer;
+}
+
+.back {
+  animation: back 0.3s linear
+}
+
+@keyframes back {
+  from {
+    transform: rotate(230deg);
+  }
+
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+.sort {
+  margin-bottom: 7px;
+  border-bottom: 1px solid;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 3px;
+  font-weight: bold;
+}
+
+.search {
+  border-bottom: 1px solid;
+}
+
+input {
+  margin: 3px;
+  padding: 4.4px 6px;
+  outline: none;
+  border: none;
+  background: gray;
+}
+
+input::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.shuff {
+  color: #868686;
+  font-size: 26px;
+  position: absolute;
+  left: 25px;
+  bottom: 18px;
+  font-weight: 200;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+svg:hover {
+  font-size: 28px;
 }
